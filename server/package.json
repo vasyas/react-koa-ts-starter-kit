@@ -1,0 +1,23 @@
+{
+  "name": "kit-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "nodemon -w ./ -i ./node_modules -e ts,tsx -x \"ts-node ./server.ts\""
+  },
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.5.0",
+    "koa-body": "^2.5.0",
+    "koa-router": "^7.4.0",
+    "source-map-support": "^0.5.4"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.0.44",
+    "@types/koa-router": "^7.0.27",
+    "nodemon": "^1.17.2",
+    "ts-node": "^5.0.1",
+    "typescript": "^2.7.2"
+  }
+}

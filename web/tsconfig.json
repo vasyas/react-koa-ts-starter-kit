@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "noImplicitAny": false,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "jsx": "react",
+    "lib": [
+      "es2015",
+      "dom"
+    ],
+    "outDir": "build/js"
+  },
+  "files": [
+    "shims.d.ts",
+    "index.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
