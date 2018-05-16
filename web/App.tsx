@@ -3,23 +3,26 @@ import { hot } from "react-hot-loader"
 import * as React from "react"
 import { Router, Route, Switch } from "react-router"
 
-import { history } from "../web/history"
-import { LoginPage } from "./pages/LoginPage"
-import { LoggedPageLayout } from "./components/layout/LoggedPageLayout"
-
-import "./www/plugins/bootstrap/css/bootstrap.css"
-import "./www/theme/scss/style.scss"
-import "./www/theme/scss/colors/blue.scss"
-import "./elpasoAdmin.scss"
+import { history } from "./history"
+import { HelloPage } from "./pages/HelloPage"
+import { HomePage } from "./pages/HomePage"
+import { Link, NavLink } from "react-router-dom"
 
 const App = () => {
     return (
         <Router history={ history }>
             <div>
-                <Switch>
-                    <Route path="/logged" component={ LoggedPageLayout }/>
-                    <Route path="/" component={ LoginPage }/>
-                </Switch>
+                <div style={{ padding: 20, backgroundColor: "#ccc" }}>
+                    <NavLink to="/" style={{ marginRight: 10 }}>Home</NavLink>
+                    <NavLink to="/hello">Hello</NavLink>
+                </div>
+
+                <div>
+                    <Switch>
+                        <Route path="/hello" component={ HelloPage }/>
+                        <Route path="/" component={ HomePage }/>
+                    </Switch>
+                </div>
             </div>
         </Router>
     )
